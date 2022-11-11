@@ -4,12 +4,14 @@ const dotenv = require("dotenv");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const database = require("./config/db");
 
 
 // dotenv config
 dotenv.config();
 // app
 const app = express()
+database()
 
 // middlewares
 app.use(morgan('dev'))
